@@ -875,7 +875,7 @@
       product_viewed.department]
     pivots: [product_viewed.department]
     filters:
-      product_viewed.brand: "-NULL"
+      product_viewed.brand:
     sorts: [sessions.count desc 0, product_viewed.department]
     limit: 10
     column_limit: 50
@@ -938,12 +938,10 @@
     y_axes: []
     defaults_version: 1
     listen:
-      Brand: product_viewed.brand
       State: users.state
       City: users.city
       Traffic Source: users.traffic_source
-      Gender: users.gender
-      Event Date: events.event_date
+      User Gender: users.gender
       Country: users.country
     row: 26
     col: 10

@@ -1,5 +1,5 @@
-connection: "looker-private-demo"
-label: " eCommerce"
+connection: "sample_bigquery_connection"
+label: "1) eCommerce Demo"
 include: "/queries/queries*.view" # includes all queries refinements
 include: "/views/**/*.view" # include all the views
 include: "/gen_ai/**/*.view" # include all the views
@@ -76,6 +76,7 @@ explore: order_items {
   join: discounts {
     view_label: "Discounts"
     type: inner
+    relationship: many_to_one
     sql_on: ${products.id} = ${discounts.product_id} ;;
   }
 
