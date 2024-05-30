@@ -44,7 +44,9 @@ view: order_items {
     filters:
     {field:created_date
       value: "28 days"
-    }}
+    }
+  }
+
 
   measure: order_count {
     view_label: "Orders"
@@ -261,7 +263,7 @@ view: order_items {
     description: "Average time it takes to process an order"
     type: average
     value_format_name: decimal_2
-    sql: 1.2*${days_to_process} ;;
+    sql: ${days_to_process} ;;
   }
 
   measure: average_shipping_time {
