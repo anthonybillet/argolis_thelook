@@ -261,7 +261,7 @@ view: order_items {
     description: "Average time it takes to process an order"
     type: average
     value_format_name: decimal_2
-    sql: ${days_to_process} ;;
+    sql: 1.2*${days_to_process} ;;
   }
 
   measure: average_shipping_time {
@@ -287,7 +287,7 @@ view: order_items {
     description: "Profit after subtracting the cost of the item"
     type: number
     value_format_name: usd
-    sql: ${sale_price} - ${inventory_items.cost};;
+    sql: 1.2*${sale_price} - ${inventory_items.cost};;
   }
 
   dimension: item_gross_margin_percentage {
