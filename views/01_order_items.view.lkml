@@ -47,7 +47,6 @@ view: order_items {
     }
   }
 
-
   measure: order_count {
     view_label: "Orders"
     description: "Number of orders"
@@ -411,7 +410,7 @@ view: order_items {
     type: number
     value_format_name: percent_2
     sql: 1.0 * ${returned_count} / nullif(${count},0) ;;
-    html: {{link}} ;;
+    # html: {{link}} ;;
   }
 
 
